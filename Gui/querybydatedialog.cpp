@@ -33,6 +33,7 @@ void QueryByDateDialog::on_pushButtonQuery_clicked()
     std::vector<Order *> orders = t->GetRecord();
 	delete t;
 
+	int nCount = 0;
     for (std::vector<Order *>::iterator it = orders.begin();
         it != orders.end();
         ++it)
@@ -41,31 +42,32 @@ void QueryByDateDialog::on_pushButtonQuery_clicked()
 		double dfNumber = (*it)->Numbers();
 		QDate orderdate = (*it)->OrderDate();
 		QDate inputdate = (*it)->InputDate();
-		ui->tableWidget->setItem(0, 
+		ui->tableWidget->setItem(nCount, 
 			0, 
 			new QTableWidgetItem(QString::number((*it)->OrderID(),10)));
-		ui->tableWidget->setItem(0, 
+		ui->tableWidget->setItem(nCount, 
 			1, 
 			new QTableWidgetItem(g_mDatabase.GetItemName((*it)->ItemID()).c_str()));
 
-		ui->tableWidget->setItem(0,
+		ui->tableWidget->setItem(nCount,
 			2,
 			new QTableWidgetItem(g_mDatabase.GetUserName((*it)->UserID()).c_str()));
 
-		ui->tableWidget->setItem(0,
+		ui->tableWidget->setItem(nCount,
 			3,
 			new QTableWidgetItem(QString::number(dfPrice)));
 
-		ui->tableWidget->setItem(0,
+		ui->tableWidget->setItem(nCount,
 			4,
 			new QTableWidgetItem(QString::number(dfNumber)));
 
-		ui->tableWidget->setItem(0,
+		ui->tableWidget->setItem(nCount,
 			5,
 			new QTableWidgetItem(orderdate.toString()));
 
-		ui->tableWidget->setItem(0,
+		ui->tableWidget->setItem(nCount,
 			6,
 			new QTableWidgetItem(inputdate.toString()));
+		++nCount;
     }
 }

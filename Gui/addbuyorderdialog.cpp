@@ -27,7 +27,6 @@ void AddBuyOrderDialog::SetItems( const std::vector<std::string> &items )
 QString AddBuyOrderDialog::GetItemName()
 {
 	return ui->comboBoxItemID->currentText();
-
 }
 
 void AddBuyOrderDialog::SetUsers( const std::vector<std::string> &users )

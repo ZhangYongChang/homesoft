@@ -57,12 +57,11 @@ int MenuDatabase::SuggestUserId()
 		}
 	}
 
-	return max;
+	return max + 1;
 }
 
 int MenuDatabase::GetItemID( const std::string &name )
 {
-
 	ItemTableType::iterator it = items.find(name);
 	if (it != items.end())
 	{
@@ -72,7 +71,6 @@ int MenuDatabase::GetItemID( const std::string &name )
 	{
 		return -1;
 	}
-
 }
 
 bool MenuDatabase::AddItemInfo( const int &id, const std::string &name )
@@ -100,7 +98,7 @@ int MenuDatabase::SuggestItemId()
 		}
 	}
 
-	return max;
+	return max + 1;
 }
 
 std::vector<std::string> MenuDatabase::GetUsers()

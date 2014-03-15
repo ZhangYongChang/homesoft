@@ -86,6 +86,11 @@ void Order::InputDate( QDate val )
 Order * Order::CreateOrder( int nOrderID,int nItemID, int nUserID, double fPriceOfEach, double fNumbers, QDate orderdate, QDate inputdate )
 {
 	Order *order = new Order();
+	if (nMaxID < nOrderID)
+	{
+		nMaxID = nOrderID;
+	}
+
 	order->OrderID(nOrderID);
 	order->ItemID(nItemID);
 	order->UserID(nUserID);
