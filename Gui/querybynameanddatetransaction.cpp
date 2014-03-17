@@ -8,12 +8,14 @@ using namespace database;
 void QueryByNameAndDateTransaction::Query()
 {
 	int nUserID = g_mDatabase.GetUserID(_name);
-	MenuDatabase::OrderListType orders =g_mDatabase.GetOrders();
+	MenuDatabase::OrderListType orders = g_mDatabase.GetOrders();
 	for (MenuDatabase::OrderListType::iterator it = orders.begin();
 		it != orders.end();
 		++it)
 	{
-		if ((*it)->OrderDate() == this->_orderdate && (*it)->UserID() == nUserID)
+		if ((*it)->OrderDate().month() == this->_orderdate.month()
+			&& (*it)->OrderDate().year() == this->_orderdate.year()
+			&& (*it)->UserID() == nUserID)
 		{
 			result.push_back(*it);
 		}

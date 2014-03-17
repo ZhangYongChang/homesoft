@@ -1,5 +1,17 @@
+#include <QtCore/QVariant>
+#include <QtGui/QAction>
+#include <QtGui/QApplication>
+#include <QtGui/QButtonGroup>
+#include <QtGui/QHeaderView>
+#include <QtGui/QMainWindow>
+#include <QtGui/QMenu>
+#include <QtGui/QMenuBar>
+#include <QtGui/QStatusBar>
+#include <QtGui/QToolBar>
+#include <QtGui/QWidget>
+#include <QFileDialog>
+
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include "adduserdialog.h"
 #include "addusertransaction.h"
 #include "additemdialog.h"
@@ -10,27 +22,125 @@
 #include "querybydatedialog.h"
 #include "loadtransaction.h"
 #include "savetransaction.h"
-#include "countermonthtransaction.h"
-#include "counterbymonthandusertransaction.h"
-
-#include <QFileDialog>
+#include "counterbymonthanduserdialog.h"
+#include "querybynameanddatedialog.h"
+#include "countermonthdialog.h"
 
 using namespace transactions;
 using namespace database;
 
 MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+QMainWindow(parent)
 {
-    ui->setupUi(this);
+	setupUi(this);
+}
+
+void MainWindow::setupUi( QMainWindow *MainWindow )
+{
+	if (MainWindow->objectName().isEmpty())
+		MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+	MainWindow->resize(400, 300);
+
+	CreateMenu(MainWindow);
+
+	MainWindow->setMenuBar(menuBar);
+	mainToolBar = new QToolBar(MainWindow);
+	MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
+	statusBar = new QStatusBar(MainWindow);
+	MainWindow->setStatusBar(statusBar);	
+
+	retranslateUi(MainWindow);
+	ActionRelation(MainWindow);
+}
+
+void MainWindow::CreateMenu( QMainWindow * MainWindow )
+{
+	actionLoad = new QAction(MainWindow);
+	actionSave = new QAction(MainWindow);
+	actionExit = new QAction(MainWindow);
+	actionExit->setObjectName(QString::fromUtf8("actionExit"));
+	actionAddUser = new QAction(MainWindow);
+	actionAddItem = new QAction(MainWindow);
+	actionAddOrder = new QAction(MainWindow);
+	actionQueryByDate = new QAction(MainWindow);
+	actionQueryByNameAndDate = new QAction(MainWindow);
+	actionCounterByDate = new QAction(MainWindow);
+	actionCounterByNameAndDate = new QAction(MainWindow);
+	actionAbout = new QAction(MainWindow);
+	centralWidget = new QWidget(MainWindow);
+	MainWindow->setCentralWidget(centralWidget);
+	menuBar = new QMenuBar(MainWindow);
+	menuBar->setGeometry(QRect(0, 0, 400, 21));
+	menuFile = new QMenu(menuBar);
+	menuAdd = new QMenu(menuBar);
+	menuQuery = new QMenu(menuBar);
+	menuCounter = new QMenu(menuBar);
+	menuHelp = new QMenu(menuBar);
+
+	menuBar->addAction(menuFile->menuAction());
+	menuBar->addAction(menuAdd->menuAction());
+	menuBar->addAction(menuQuery->menuAction());
+	menuBar->addAction(menuCounter->menuAction());
+	menuBar->addAction(menuHelp->menuAction());
+	menuFile->addAction(actionLoad);
+	menuFile->addAction(actionSave);
+	menuFile->addAction(actionExit);
+	menuAdd->addAction(actionAddUser);
+	menuAdd->addAction(actionAddItem);
+	menuAdd->addAction(actionAddOrder);
+	menuQuery->addAction(actionQueryByDate);
+	menuQuery->addAction(actionQueryByNameAndDate);
+	menuCounter->addAction(actionCounterByDate);
+	menuCounter->addAction(actionCounterByNameAndDate);
+	menuHelp->addAction(actionAbout);
+}
+
+void MainWindow::retranslateUi( QMainWindow *MainWindow )
+{
+	MainWindow->setWindowTitle(QApplication::translate("MainWindow", "\350\264\255\350\217\234\347\256\241\347\220\206\347\263\273\347\273\237", 0, QApplication::UnicodeUTF8));
+	actionLoad->setText(QApplication::translate("MainWindow", "Load", 0, QApplication::UnicodeUTF8));
+	actionSave->setText(QApplication::translate("MainWindow", "Save", 0, QApplication::UnicodeUTF8));
+	actionExit->setText(QApplication::translate("MainWindow", "Exit", 0, QApplication::UnicodeUTF8));
+	actionAddUser->setText(QApplication::translate("MainWindow", "AddUser", 0, QApplication::UnicodeUTF8));
+	actionAddItem->setText(QApplication::translate("MainWindow", "AddItem", 0, QApplication::UnicodeUTF8));
+	actionAddOrder->setText(QApplication::translate("MainWindow", "AddOrder", 0, QApplication::UnicodeUTF8));
+	actionQueryByDate->setText(QApplication::translate("MainWindow", "QueryByDate", 0, QApplication::UnicodeUTF8));
+	actionQueryByNameAndDate->setText(QApplication::translate("MainWindow", "QueryByNameAndDate", 0, QApplication::UnicodeUTF8));
+	actionCounterByDate->setText(QApplication::translate("MainWindow", "CounterByDate", 0, QApplication::UnicodeUTF8));
+	actionCounterByNameAndDate->setText(QApplication::translate("MainWindow", "CounterByNameAndDate", 0, QApplication::UnicodeUTF8));
+	actionAbout->setText(QApplication::translate("MainWindow", "About", 0, QApplication::UnicodeUTF8));
+	menuFile->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
+	menuAdd->setTitle(QApplication::translate("MainWindow", "Add", 0, QApplication::UnicodeUTF8));
+	menuQuery->setTitle(QApplication::translate("MainWindow", "Query", 0, QApplication::UnicodeUTF8));
+	menuCounter->setTitle(QApplication::translate("MainWindow", "Counter", 0, QApplication::UnicodeUTF8));
+	menuHelp->setTitle(QApplication::translate("MainWindow", "Help", 0, QApplication::UnicodeUTF8));
+}
+
+void MainWindow::ActionRelation( QMainWindow * MainWindow )
+{
+	connect(actionLoad, SIGNAL(triggered()), MainWindow, SLOT(onActionLoad()));
+	connect(actionSave, SIGNAL(triggered()), MainWindow, SLOT(onActionSave()));
+	connect(actionExit, SIGNAL(triggered()), MainWindow, SLOT(onActionExit()));
+	connect(actionAddUser, SIGNAL(triggered()), MainWindow, SLOT(onActionAddUser()));
+	connect(actionAddItem, SIGNAL(triggered()), MainWindow, SLOT(onActionAddItem()));
+	connect(actionAddOrder, SIGNAL(triggered()), MainWindow, SLOT(onActionAddOrder()));
+	connect(actionQueryByDate, SIGNAL(triggered()), MainWindow, SLOT(onActionQueryByDate()));
+	connect(actionQueryByNameAndDate, SIGNAL(triggered()), MainWindow, SLOT(onActionQueryByNameAndDate()));
+	connect(actionCounterByDate, SIGNAL(triggered()), MainWindow, SLOT(onActionCounterByMonth()));
+	connect(actionCounterByNameAndDate, SIGNAL(triggered()), MainWindow, SLOT(onActionCounterByNameAndDate()));
+	connect(actionAbout, SIGNAL(triggered()), MainWindow, SLOT(onActionAbout()));
+}
+
+void MainWindow::onActionAbout()
+{
+
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
 }
 
-void MainWindow::on_actionLoad_triggered()
+void MainWindow::onActionLoad()
 {
 	QString fileName = QFileDialog::getOpenFileName(this,
 		tr("Open Text"), "", tr("TEXT Files (*.txt)"));
@@ -44,7 +154,7 @@ void MainWindow::on_actionLoad_triggered()
 	delete transaction;
 }
 
-void MainWindow::on_actionSave_triggered()
+void MainWindow::onActionSave()
 {
 	QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"),
 		"",
@@ -59,12 +169,12 @@ void MainWindow::on_actionSave_triggered()
 	delete transaction;
 }
 
-void MainWindow::on_actionExit_triggered()
+void MainWindow::onActionExit()
 {
 	close();
 }
 
-void MainWindow::on_actionAddUser_triggered()
+void MainWindow::onActionAddUser()
 {
 	AddUserDialog *dlg = new AddUserDialog();
 	if (dlg->exec() == QDialog::Accepted)
@@ -74,9 +184,10 @@ void MainWindow::on_actionAddUser_triggered()
 		t->Execute();
 		delete t;
 	}
+	delete dlg;
 }
 
-void MainWindow::on_actionAddItem_triggered()
+void MainWindow::onActionAddItem()
 {
 	AddItemDialog *dlg = new AddItemDialog();
 	if (dlg->exec() == QDialog::Accepted)
@@ -86,9 +197,10 @@ void MainWindow::on_actionAddItem_triggered()
 		t->Execute();
 		delete t;
 	}
+	delete dlg;
 }
 
-void MainWindow::on_actionAddOrder_triggered()
+void MainWindow::onActionAddOrder()
 {
 	AddBuyOrderDialog *dlg = new AddBuyOrderDialog();
 	dlg->SetItems(g_mDatabase.GetItems());
@@ -107,29 +219,33 @@ void MainWindow::on_actionAddOrder_triggered()
 		t->Execute();
 		delete t;
 	}
+	delete dlg;
 }
 
-void MainWindow::on_actionQueryByDate_triggered()
+void MainWindow::onActionQueryByDate()
 {
 	QueryByDateDialog *dlg = new QueryByDateDialog();
 	dlg->exec();
+	delete dlg;
 }
 
-void MainWindow::on_actionQueryByNameAndDate_triggered()
+void MainWindow::onActionQueryByNameAndDate()
 {
-
+	QueryByNameAndDateDialog *dlg = new QueryByNameAndDateDialog();
+	dlg->exec();
+	delete dlg;
 }
 
-void MainWindow::on_actionCounterByMonth()
+void MainWindow::onActionCounterByMonth()
 {
-	QDate date;
-	CounterTransaction *t = new CounterMonthTransaction(date);
-	t->Execute();
-	double fSum = t->GetCount();
-	delete t;
+	CounterMonthDialog *dlg = new CounterMonthDialog();
+	dlg->exec();
+	delete dlg;
 }
 
-void MainWindow::on_actionCounterByNameAndDate_triggered()
+void MainWindow::onActionCounterByNameAndDate()
 {
-
+	CounterByMonthAndUserDialog *dlg = new CounterByMonthAndUserDialog();
+	dlg->exec();
+	delete dlg;
 }

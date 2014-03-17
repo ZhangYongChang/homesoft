@@ -31,7 +31,10 @@ set(QOBJ_HDRS
 	addbuyorderdialog.h 
 	additemdialog.h
 	adduserdialog.h
-	querybydatedialog.h)
+	querybydatedialog.h
+	querybynameanddatedialog.h
+	countermonthdialog.h
+	counterbymonthanduserdialog.h)
 
 qt4_wrap_ui(QTUICs ${qt_UI})
 qt4_wrap_cpp(MOCSrcs ${QOBJ_HDRS})

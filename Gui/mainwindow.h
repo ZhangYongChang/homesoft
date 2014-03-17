@@ -2,10 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-namespace Ui {
-class MainWindow;
-}
+class QAction;
+class QMenuBar;
+class QWidget;
+class QMenu;
+class QToolBar;
+class QStatusBar;
 
 class MainWindow : public QMainWindow
 {
@@ -16,28 +18,48 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_actionLoad_triggered();
-
-    void on_actionSave_triggered();
-
-    void on_actionExit_triggered();
-
-    void on_actionAddUser_triggered();
-
-    void on_actionAddItem_triggered();
-
-    void on_actionAddOrder_triggered();
-
-    void on_actionQueryByDate_triggered();
-
-    void on_actionQueryByNameAndDate_triggered();
-
-    void on_actionCounterByMonth();
-
-    void on_actionCounterByNameAndDate_triggered();
+    void onActionLoad();
+	void onActionSave();
+    void onActionExit();
+    void onActionAddUser();
+    void onActionAddItem();
+    void onActionAddOrder();
+    void onActionQueryByDate();
+    void onActionQueryByNameAndDate();
+    void onActionCounterByMonth();
+    void onActionCounterByNameAndDate();
+	void onActionAbout();
 
 private:
-    Ui::MainWindow *ui;
+	void setupUi(QMainWindow *MainWindow);
+	void CreateMenu( QMainWindow * MainWindow );
+	void ActionRelation( QMainWindow * MainWindow );
+	void retranslateUi(QMainWindow *MainWindow);
+
+private:
+	QWidget *centralWidget;
+	
+	QMenuBar *menuBar;
+	QMenu *menuFile;
+	QMenu *menuAdd;
+	QMenu *menuQuery;
+	QMenu *menuCounter;
+	QMenu *menuHelp;
+
+	QAction *actionLoad;
+	QAction *actionSave;
+	QAction *actionExit;
+	QAction *actionAddUser;
+	QAction *actionAddItem;
+	QAction *actionAddOrder;
+	QAction *actionQueryByDate;
+	QAction *actionQueryByNameAndDate;
+	QAction *actionCounterByDate;
+	QAction *actionCounterByNameAndDate;
+	QAction *actionAbout;
+
+	QToolBar *mainToolBar;
+	QStatusBar *statusBar;
 };
 
 #endif // MAINWINDOW_H
