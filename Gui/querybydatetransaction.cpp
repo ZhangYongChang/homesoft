@@ -12,7 +12,8 @@ void QueryByDateTransaction::Query()
 		it != orders.end();
 		++it)
 	{
-		if ((*it)->OrderDate().month() == this->_orderdate.month())
+		if ((*it)->OrderDate().month() == this->_orderdate.month()
+			&&(*it)->OrderDate().year() == this->_orderdate.year())
 		{
 			result.push_back(*it);
 		}
@@ -20,6 +21,7 @@ void QueryByDateTransaction::Query()
 }
 
 QueryByDateTransaction::QueryByDateTransaction( QDate orderdate )
+:_orderdate(orderdate)
 {
 
 }
