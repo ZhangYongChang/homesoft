@@ -101,6 +101,8 @@ void QueryByDateDialog::setupUi( QDialog *QueryByDateDialog )
 	retranslateUi(QueryByDateDialog);
 	QObject::connect(buttonBox, SIGNAL(accepted()), QueryByDateDialog, SLOT(accept()));
 	QObject::connect(buttonBox, SIGNAL(rejected()), QueryByDateDialog, SLOT(reject()));
+	QObject::connect(pushButtonQuery, SIGNAL(clicked()), QueryByDateDialog, SLOT(on_pushButtonQuery_clicked()));
+	this->dateEditMonth->setDate(QDate::currentDate());
 }
 
 void QueryByDateDialog::retranslateUi( QDialog *QueryByDateDialog )

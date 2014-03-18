@@ -97,6 +97,8 @@ void AddBuyOrderDialog::setupUi( QDialog *AddBuyOrderDialog )
 	retranslateUi(AddBuyOrderDialog);
 	QObject::connect(buttonBox, SIGNAL(accepted()), AddBuyOrderDialog, SLOT(accept()));
 	QObject::connect(buttonBox, SIGNAL(rejected()), AddBuyOrderDialog, SLOT(reject()));
+
+	this->dateEdit->setDate(QDate::currentDate());
 }
 
 void AddBuyOrderDialog::retranslateUi( QDialog *AddBuyOrderDialog )

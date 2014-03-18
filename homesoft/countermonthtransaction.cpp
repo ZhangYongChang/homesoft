@@ -15,7 +15,7 @@ namespace transactions
         for (std::vector<Order *>::iterator it = orders.begin();
              it != orders.end();
              ++it) {
-            _dfSum = (*it)->PriceOfEach() * (*it)->Numbers();
+            _dfSum = _dfSum + (*it)->PriceOfEach() * (*it)->Numbers();
         }
 
         delete qt;

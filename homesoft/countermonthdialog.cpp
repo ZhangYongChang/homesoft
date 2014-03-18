@@ -60,6 +60,7 @@ void CounterMonthDialog::setupUi( QDialog *QueryByNameAndDateDialog )
 	QObject::connect(buttonBox, SIGNAL(accepted()), QueryByNameAndDateDialog, SLOT(accept()));
 	QObject::connect(buttonBox, SIGNAL(rejected()), QueryByNameAndDateDialog, SLOT(reject()));
 	QObject::connect(pushButtonQuery, SIGNAL(clicked()), QueryByNameAndDateDialog, SLOT(on_pushButtonCount()));
+	this->dateEditMonth->setDate(QDate::currentDate());
 }
 
 void CounterMonthDialog::retranslateUi( QDialog *QueryByNameAndDateDialog )
