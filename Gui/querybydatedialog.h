@@ -3,9 +3,11 @@
 
 #include <QDialog>
 
-namespace Ui {
-class QueryByDateDialog;
-}
+class QDialogButtonBox;
+class QDateEdit;
+class QLabel;
+class QPushButton;
+class QTableWidget;
 
 class QueryByDateDialog : public QDialog
 {
@@ -19,7 +21,14 @@ private slots:
     void on_pushButtonQuery_clicked();
 
 private:
-    Ui::QueryByDateDialog *ui;
+	QDialogButtonBox *buttonBox;
+	QDateEdit *dateEditMonth;
+	QLabel *labelMonth;
+	QPushButton *pushButtonQuery;
+	QTableWidget *tableWidget;
+
+	void setupUi(QDialog *QueryByDateDialog);
+	void retranslateUi(QDialog *QueryByDateDialog);
 };
 
 #endif // QUERYBYDATEDIALOG_H

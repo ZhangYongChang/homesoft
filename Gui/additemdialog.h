@@ -3,9 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class AddItemDialog;
-}
+class QDialogButtonBox;
+class QLineEdit;
+class QLabel;
 
 class AddItemDialog : public QDialog
 {
@@ -18,7 +18,12 @@ public:
 	QString GetItemName();
 
 private:
-    Ui::AddItemDialog *ui;
+	QDialogButtonBox *buttonBox;
+	QLineEdit *lineEditItemName;
+	QLabel *labelItemStyle;
+
+	void setupUi(QDialog *AddItemDialog);
+	void retranslateUi(QDialog *AddItemDialog);
 };
 
 #endif // ADDITEMDIALOG_H

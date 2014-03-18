@@ -4,9 +4,11 @@
 #include <QDialog>
 #include <QDate>
 
-namespace Ui {
-class AddBuyOrderDialog;
-}
+class QDialogButtonBox;
+class QDateEdit;
+class QComboBox;
+class QLineEdit;
+class QLabel;
 
 class AddBuyOrderDialog : public QDialog
 {
@@ -26,7 +28,17 @@ public:
 	double GetNumber();
 
 private:
-    Ui::AddBuyOrderDialog *ui;
+	QDialogButtonBox *buttonBox;
+	QDateEdit *dateEdit;
+	QComboBox *comboBoxUserID;
+	QComboBox *comboBoxItemID;
+	QLineEdit *lineEditNumber;
+	QLineEdit *lineEditPrice;
+	QLabel *labelPrice;
+	QLabel *labelNumber;
+
+	void setupUi(QDialog *AddBuyOrderDialog);
+	void retranslateUi(QDialog *AddBuyOrderDialog);
 };
 
 #endif // ADDBUYORDERDIALOG_H

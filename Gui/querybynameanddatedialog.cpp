@@ -93,34 +93,26 @@ void QueryByNameAndDateDialog::setupUi( QDialog *QueryByNameAndDateDialog )
 		QueryByNameAndDateDialog->setObjectName(QString::fromUtf8("QueryByDateDialog"));
 	QueryByNameAndDateDialog->resize(800, 600);
 	buttonBox = new QDialogButtonBox(QueryByNameAndDateDialog);
-	buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
 	buttonBox->setGeometry(QRect(330, 550, 341, 32));
 	buttonBox->setOrientation(Qt::Horizontal);
 	buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
 	dateEditMonth = new QDateEdit(QueryByNameAndDateDialog);
-	dateEditMonth->setObjectName(QString::fromUtf8("dateEditMonth"));
 	dateEditMonth->setGeometry(QRect(50, 10, 110, 22));
 	comboBox = new QComboBox(QueryByNameAndDateDialog);
-	comboBox->setObjectName(QString::fromUtf8("comboBox"));
 	comboBox->setGeometry(QRect(300, 10, 110, 22));
 	this->SetUsers(g_mDatabase.GetUsers());
 	labelMonth = new QLabel(QueryByNameAndDateDialog);
-	labelMonth->setObjectName(QString::fromUtf8("labelMonth"));
 	labelMonth->setGeometry(QRect(10, 10, 54, 12));
 	labelName = new QLabel(QueryByNameAndDateDialog);
-	labelName->setObjectName(QString::fromUtf8("labelName"));
 	labelName->setGeometry(QRect(200, 10, 54, 12));
 	pushButtonQuery = new QPushButton(QueryByNameAndDateDialog);
-	pushButtonQuery->setObjectName(QString::fromUtf8("pushButtonQuery"));
 	pushButtonQuery->setGeometry(QRect(40, 560, 75, 23));
 	tableWidget = new QTableWidget(QueryByNameAndDateDialog);
-	tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
 	tableWidget->setGeometry(QRect(10, 40, 771, 471));
 
 	retranslateUi(QueryByNameAndDateDialog);
 	QObject::connect(buttonBox, SIGNAL(accepted()), QueryByNameAndDateDialog, SLOT(accept()));
 	QObject::connect(buttonBox, SIGNAL(rejected()), QueryByNameAndDateDialog, SLOT(reject()));
-
 	QObject::connect(pushButtonQuery, SIGNAL(clicked()), QueryByNameAndDateDialog, SLOT(on_pushButtonQuery()));
 }
 
@@ -142,6 +134,5 @@ void QueryByNameAndDateDialog::SetUsers( const std::vector<std::string> &users )
 	{
 		comboBox->addItem(it->c_str());
 	}
-
 }
 

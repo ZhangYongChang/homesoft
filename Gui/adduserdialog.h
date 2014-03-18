@@ -3,9 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class AddUserDialog;
-}
+class QDialogButtonBox;
+class QLabel;
+class QLineEdit;
 
 class AddUserDialog : public QDialog
 {
@@ -18,7 +18,12 @@ public:
 	QString GetUserName();
 
 private:
-    Ui::AddUserDialog *ui;
+	QDialogButtonBox *buttonBox;
+	QLabel *labelUserName;
+	QLineEdit *lineEditUserName;
+
+	void setupUi(QDialog *AddUserDialog);
+	void retranslateUi(QDialog *AddUserDialog);
 };
 
 #endif // ADDUSERDIALOG_H
