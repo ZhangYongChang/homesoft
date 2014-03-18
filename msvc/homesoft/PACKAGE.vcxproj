@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{DE6EF5A7-BAC8-40E0-AF3E-93273A6896E7}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>PACKAGE</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType></ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"d:\Program Files (x86)\CMake 2.8\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"d:\Program Files (x86)\CMake 2.8\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"d:\Program Files (x86)\CMake 2.8\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"d:\Program Files (x86)\CMake 2.8\bin\cpack.exe" -C $(Configuration) --config ./CPackConfig.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\ce19bd88260709ab3f78b467419b1796\PACKAGE_force.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/ce19bd88260709ab3f78b467419b1796/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\PACKAGE_force</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/ce19bd88260709ab3f78b467419b1796/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\PACKAGE_force</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/ce19bd88260709ab3f78b467419b1796/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\PACKAGE_force</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/ce19bd88260709ab3f78b467419b1796/PACKAGE_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\PACKAGE_force</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/YunYun/Desktop/homesoft/msvc/ALL_BUILD.vcxproj">
+      <Project>0063DB6E-49C3-444E-959F-1BC97D683C5C</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

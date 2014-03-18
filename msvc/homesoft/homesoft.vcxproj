@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{60D3D6A9-6903-4988-9729-2D3E8C66159A}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>homesoft</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">homesoft.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">homesoft</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">homesoft.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">homesoft</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">homesoft.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">homesoft</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">homesoft.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">homesoft</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\qt-4.8.5\lib\qtmaind.lib;E:\qt-4.8.5\lib\QtGuid4.lib;E:\qt-4.8.5\lib\QtCored4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/YunYun/Desktop/homesoft/msvc/bin/Debug/homesoft.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/YunYun/Desktop/homesoft/msvc/bin/Debug/homesoft.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\qt-4.8.5\lib\qtmain.lib;E:\qt-4.8.5\lib\QtGui4.lib;E:\qt-4.8.5\lib\QtCore4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/YunYun/Desktop/homesoft/msvc/bin/Release/homesoft.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/YunYun/Desktop/homesoft/msvc/bin/Release/homesoft.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\qt-4.8.5\lib\qtmain.lib;E:\qt-4.8.5\lib\QtGui4.lib;E:\qt-4.8.5\lib\QtCore4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/YunYun/Desktop/homesoft/msvc/bin/MinSizeRel/homesoft.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/YunYun/Desktop/homesoft/msvc/bin/MinSizeRel/homesoft.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_GUI_LIB;QT_CORE_LIB;QT_NO_DEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\qt-4.8.5\include;E:\qt-4.8.5\include\QtGui;E:\qt-4.8.5\include\QtCore;E:\qt-4.8.5\include\ActiveQt;E:\qt-4.8.5\include\QtDesigner;E:\qt-4.8.5\include\QtDeclarative;E:\qt-4.8.5\include\QtScriptTools;E:\qt-4.8.5\include\QtDBus;E:\qt-4.8.5\include\QtXml;E:\qt-4.8.5\include\QtSql;E:\qt-4.8.5\include\QtOpenGL;E:\qt-4.8.5\include\QtMultimedia;E:\qt-4.8.5\include\QtNetwork;E:\qt-4.8.5\include\phonon;E:\qt-4.8.5\include\QtXmlPatterns;E:\qt-4.8.5\include\QtWebKit;E:\qt-4.8.5\include\QtHelp;E:\qt-4.8.5\include\QtUiTools;E:\qt-4.8.5\include\QtTest;E:\qt-4.8.5\include\QtScript;E:\qt-4.8.5\include\QtSvg;E:\qt-4.8.5\include\Qt3Support;E:\qt-4.8.5\mkspecs\default;C:\Users\YunYun\Desktop\homesoft\msvc\Gui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\qt-4.8.5\lib\qtmain.lib;E:\qt-4.8.5\lib\QtGui4.lib;E:\qt-4.8.5\lib\QtCore4.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/YunYun/Desktop/homesoft/msvc/bin/RelWithDebInfo/homesoft.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/YunYun/Desktop/homesoft/msvc/bin/RelWithDebInfo/homesoft.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\homesoft\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"d:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/YunYun/Desktop/homesoft -BC:/Users/YunYun/Desktop/homesoft/msvc --check-stamp-file C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"d:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/YunYun/Desktop/homesoft -BC:/Users/YunYun/Desktop/homesoft/msvc --check-stamp-file C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"d:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/YunYun/Desktop/homesoft -BC:/Users/YunYun/Desktop/homesoft/msvc --check-stamp-file C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"d:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/YunYun/Desktop/homesoft -BC:/Users/YunYun/Desktop/homesoft/msvc --check-stamp-file C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/CMakeLists.txt;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;d:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\UseQt4.cmake;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_mainwindow.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_mainwindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_mainwindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_mainwindow.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\mainwindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_mainwindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_mainwindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_mainwindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_mainwindow.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\mainwindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_mainwindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_mainwindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_mainwindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_mainwindow.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\mainwindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_mainwindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_mainwindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_mainwindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_mainwindow.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\mainwindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_mainwindow.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_addbuyorderdialog.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_addbuyorderdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_addbuyorderdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_addbuyorderdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\addbuyorderdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_addbuyorderdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_addbuyorderdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_addbuyorderdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_addbuyorderdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\addbuyorderdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_addbuyorderdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_addbuyorderdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_addbuyorderdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_addbuyorderdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\addbuyorderdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_addbuyorderdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_addbuyorderdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_addbuyorderdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_addbuyorderdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\addbuyorderdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_addbuyorderdialog.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_additemdialog.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_additemdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_additemdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_additemdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\additemdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_additemdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_additemdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_additemdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_additemdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\additemdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_additemdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_additemdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_additemdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_additemdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\additemdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_additemdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_additemdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_additemdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_additemdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\additemdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_additemdialog.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_adduserdialog.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_adduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_adduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_adduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\adduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_adduserdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_adduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_adduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_adduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\adduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_adduserdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_adduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_adduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_adduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\adduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_adduserdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_adduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_adduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_adduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\adduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_adduserdialog.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_querybydatedialog.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_querybydatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybydatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybydatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybydatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybydatedialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_querybydatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybydatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybydatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybydatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybydatedialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_querybydatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybydatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybydatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybydatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybydatedialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_querybydatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybydatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybydatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybydatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybydatedialog.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_querybynameanddatedialog.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_querybynameanddatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybynameanddatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybynameanddatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybynameanddatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybynameanddatedialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_querybynameanddatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybynameanddatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybynameanddatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybynameanddatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybynameanddatedialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_querybynameanddatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybynameanddatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybynameanddatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybynameanddatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybynameanddatedialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_querybynameanddatedialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_querybynameanddatedialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_querybynameanddatedialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\querybynameanddatedialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_querybynameanddatedialog.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_countermonthdialog.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_countermonthdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_countermonthdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_countermonthdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\countermonthdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_countermonthdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_countermonthdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_countermonthdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_countermonthdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\countermonthdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_countermonthdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_countermonthdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_countermonthdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_countermonthdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\countermonthdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_countermonthdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_countermonthdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_countermonthdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_countermonthdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\countermonthdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_countermonthdialog.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeFiles\13fd87bdac99d59e2809716bdfdfe243\moc_counterbymonthanduserdialog.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_counterbymonthanduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_counterbymonthanduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_counterbymonthanduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\counterbymonthanduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_counterbymonthanduserdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_counterbymonthanduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_counterbymonthanduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_counterbymonthanduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\counterbymonthanduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_counterbymonthanduserdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_counterbymonthanduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_counterbymonthanduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_counterbymonthanduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\counterbymonthanduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_counterbymonthanduserdialog.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_counterbymonthanduserdialog.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\Users\YunYun\Desktop\homesoft\msvc\homesoft
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+E:\qt-4.8.5\bin\moc.exe @C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_counterbymonthanduserdialog.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/msvc/CMakeFiles/13fd87bdac99d59e2809716bdfdfe243/moc_counterbymonthanduserdialog.cxx.rule;C:\Users\YunYun\Desktop\homesoft\homesoft\counterbymonthanduserdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\moc_counterbymonthanduserdialog.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\homesoft\dockwidgets.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_dockwidgets.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+E:\qt-4.8.5\bin\rcc.exe -name dockwidgets -o C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/qrc_dockwidgets.cxx C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\images\open.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\exit.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\save.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\adduser.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\additem.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\addorder.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\help.png;C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\dockwidgets.qrc.depends;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\qrc_dockwidgets.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_dockwidgets.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+E:\qt-4.8.5\bin\rcc.exe -name dockwidgets -o C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/qrc_dockwidgets.cxx C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\images\open.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\exit.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\save.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\adduser.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\additem.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\addorder.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\help.png;C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\dockwidgets.qrc.depends;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\qrc_dockwidgets.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_dockwidgets.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+E:\qt-4.8.5\bin\rcc.exe -name dockwidgets -o C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/qrc_dockwidgets.cxx C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\images\open.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\exit.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\save.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\adduser.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\additem.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\addorder.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\help.png;C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\dockwidgets.qrc.depends;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\qrc_dockwidgets.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_dockwidgets.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+E:\qt-4.8.5\bin\rcc.exe -name dockwidgets -o C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/qrc_dockwidgets.cxx C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/YunYun/Desktop/homesoft/homesoft/dockwidgets.qrc;C:\Users\YunYun\Desktop\homesoft\homesoft\images\open.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\exit.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\save.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\adduser.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\additem.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\addorder.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\querybyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbydate.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\countbyname.png;C:\Users\YunYun\Desktop\homesoft\homesoft\images\help.png;C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\dockwidgets.qrc.depends;C:\Users\YunYun\Desktop\homesoft\homesoft\dockwidgets.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\YunYun\Desktop\homesoft\msvc\homesoft\qrc_dockwidgets.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\homesoft\addbuyorderdialog.h" />
+    <ClInclude Include="..\..\homesoft\additemdialog.h" />
+    <ClInclude Include="..\..\homesoft\additemstyletransaction.h" />
+    <ClInclude Include="..\..\homesoft\addordertransaction.h" />
+    <ClInclude Include="..\..\homesoft\adduserdialog.h" />
+    <ClInclude Include="..\..\homesoft\addusertransaction.h" />
+    <ClInclude Include="..\..\homesoft\counterbymonthanduserdialog.h" />
+    <ClInclude Include="..\..\homesoft\counterbymonthandusertransaction.h" />
+    <ClInclude Include="..\..\homesoft\countermonthdialog.h" />
+    <ClInclude Include="..\..\homesoft\countermonthtransaction.h" />
+    <ClInclude Include="..\..\homesoft\countertransaction.h" />
+    <ClInclude Include="..\..\homesoft\loadtransaction.h" />
+    <ClInclude Include="..\..\homesoft\mainwindow.h" />
+    <ClInclude Include="..\..\homesoft\menudatabase.h" />
+    <ClInclude Include="..\..\homesoft\order.h" />
+    <ClInclude Include="..\..\homesoft\querybydatedialog.h" />
+    <ClInclude Include="..\..\homesoft\querybydatetransaction.h" />
+    <ClInclude Include="..\..\homesoft\querybynameanddatedialog.h" />
+    <ClInclude Include="..\..\homesoft\querybynameanddatetransaction.h" />
+    <ClInclude Include="..\..\homesoft\querytransaction.h" />
+    <ClInclude Include="..\..\homesoft\savetransaction.h" />
+    <ClInclude Include="..\..\homesoft\transaction.h" />
+    <ClCompile Include="..\..\homesoft\addbuyorderdialog.cpp"  />
+    <ClCompile Include="..\..\homesoft\additemdialog.cpp"  />
+    <ClCompile Include="..\..\homesoft\additemstyletransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\addordertransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\adduserdialog.cpp"  />
+    <ClCompile Include="..\..\homesoft\addusertransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\counterbymonthanduserdialog.cpp"  />
+    <ClCompile Include="..\..\homesoft\counterbymonthandusertransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\countermonthdialog.cpp"  />
+    <ClCompile Include="..\..\homesoft\countermonthtransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\countertransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\loadtransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\main.cpp"  />
+    <ClCompile Include="..\..\homesoft\mainwindow.cpp"  />
+    <ClCompile Include="..\..\homesoft\menudatabase.cpp"  />
+    <ClCompile Include="..\..\homesoft\order.cpp"  />
+    <ClCompile Include="..\..\homesoft\querybydatedialog.cpp"  />
+    <ClCompile Include="..\..\homesoft\querybydatetransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\querybynameanddatedialog.cpp"  />
+    <ClCompile Include="..\..\homesoft\querybynameanddatetransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\querytransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\savetransaction.cpp"  />
+    <ClCompile Include="..\..\homesoft\transaction.cpp"  />
+    <ClCompile Include="moc_mainwindow.cxx"  />
+    <ClCompile Include="moc_addbuyorderdialog.cxx"  />
+    <ClCompile Include="moc_additemdialog.cxx"  />
+    <ClCompile Include="moc_adduserdialog.cxx"  />
+    <ClCompile Include="moc_querybydatedialog.cxx"  />
+    <ClCompile Include="moc_querybynameanddatedialog.cxx"  />
+    <ClCompile Include="moc_countermonthdialog.cxx"  />
+    <ClCompile Include="moc_counterbymonthanduserdialog.cxx"  />
+    <ClCompile Include="qrc_dockwidgets.cxx"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/YunYun/Desktop/homesoft/msvc/ZERO_CHECK.vcxproj">
+      <Project>5237EA5F-1212-4DB7-A2FE-A0B8BA0F6186</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

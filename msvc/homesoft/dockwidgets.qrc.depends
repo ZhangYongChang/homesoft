@@ -1,0 +1,15 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>images/open.png</file>
+    <file>images/exit.png</file>
+    <file>images/save.png</file>
+    <file>images/adduser.png</file>
+    <file>images/additem.png</file>
+    <file>images/addorder.png</file>
+    <file>images/querybydate.png</file>
+    <file>images/querybyname.png</file>
+    <file>images/countbydate.png</file>
+    <file>images/countbyname.png</file>
+    <file>images/help.png</file>
+</qresource>
+</RCC>

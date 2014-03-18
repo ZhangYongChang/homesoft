@@ -1,0 +1,10 @@
+-IE:/qt-4.8.5/include
+-IE:/qt-4.8.5/include/QtGui
+-IE:/qt-4.8.5/include/QtCore
+-DQT_DLL
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-DWIN32
+-o
+C:/Users/YunYun/Desktop/homesoft/msvc/homesoft/moc_counterbymonthanduserdialog.cxx
+C:/Users/YunYun/Desktop/homesoft/homesoft/counterbymonthanduserdialog.h
