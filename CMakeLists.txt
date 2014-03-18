@@ -17,7 +17,7 @@ message(STATUS "QT_ROOT:" ${QT_ROOT})
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 
-add_subdirectory(${PROJECT_SOURCE_DIR}/Gui)
+add_subdirectory(${PROJECT_SOURCE_DIR}/homesoft)
 
 # Build a CPack driven installer package
 include (InstallRequiredSystemLibraries)
