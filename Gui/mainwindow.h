@@ -35,6 +35,7 @@ private:
 	void CreateMenu( QMainWindow * MainWindow );
 	void ActionRelation( QMainWindow * MainWindow );
 	void retranslateUi(QMainWindow *MainWindow);
+	void CreateToolBar(QMainWindow *MainWindow);
 
 private:
 	QWidget *centralWidget;
@@ -58,7 +59,12 @@ private:
 	QAction *actionCounterByNameAndDate;
 	QAction *actionAbout;
 
-	QToolBar *mainToolBar;
+	QToolBar *fileToolBar;
+	QToolBar *addInfoToolBar;
+	QToolBar *counterToolBar;
+	QToolBar *queryToolBar;
+	QToolBar *helpToolBar;
+
 	QStatusBar *statusBar;
 };
 

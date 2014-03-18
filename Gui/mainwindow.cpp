@@ -44,29 +44,63 @@ void MainWindow::setupUi( QMainWindow *MainWindow )
 	CreateMenu(MainWindow);
 
 	MainWindow->setMenuBar(menuBar);
-	mainToolBar = new QToolBar(MainWindow);
-	MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
+	fileToolBar = new QToolBar(MainWindow);
+	addInfoToolBar = new QToolBar(MainWindow);
+	counterToolBar = new QToolBar(MainWindow);
+	queryToolBar = new QToolBar(MainWindow);
+	helpToolBar = new QToolBar(MainWindow);
+
+	MainWindow->addToolBar(Qt::TopToolBarArea, fileToolBar);
+	MainWindow->addToolBar(addInfoToolBar);
+	MainWindow->addToolBar(queryToolBar);
+	MainWindow->addToolBar(counterToolBar);
+	MainWindow->addToolBar(helpToolBar);
+
 	statusBar = new QStatusBar(MainWindow);
 	MainWindow->setStatusBar(statusBar);	
 
 	retranslateUi(MainWindow);
 	ActionRelation(MainWindow);
+	CreateToolBar(MainWindow);
+}
+
+void MainWindow::CreateToolBar( QMainWindow *MainWindow )
+{
+	this->fileToolBar->addAction(actionLoad);
+	this->fileToolBar->addAction(actionSave);
+	this->fileToolBar->addAction(actionExit);
+
+	this->addInfoToolBar->addAction(actionAddUser);
+	this->addInfoToolBar->addAction(actionAddItem);
+	this->addInfoToolBar->addAction(actionAddOrder);
+
+	this->queryToolBar->addAction(actionQueryByDate);
+	this->queryToolBar->addAction(actionQueryByNameAndDate);
+
+	this->counterToolBar->addAction(actionCounterByDate);
+	this->counterToolBar->addAction(actionCounterByNameAndDate);
+
+	this->helpToolBar->addAction(actionAbout);
 }
 
 void MainWindow::CreateMenu( QMainWindow * MainWindow )
 {
-	actionLoad = new QAction(MainWindow);
-	actionSave = new QAction(MainWindow);
-	actionExit = new QAction(MainWindow);
-	actionExit->setObjectName(QString::fromUtf8("actionExit"));
-	actionAddUser = new QAction(MainWindow);
-	actionAddItem = new QAction(MainWindow);
-	actionAddOrder = new QAction(MainWindow);
-	actionQueryByDate = new QAction(MainWindow);
-	actionQueryByNameAndDate = new QAction(MainWindow);
-	actionCounterByDate = new QAction(MainWindow);
-	actionCounterByNameAndDate = new QAction(MainWindow);
-	actionAbout = new QAction(MainWindow);
+	actionLoad = new QAction(QIcon(":/images/open.png"), tr("&Open..."), MainWindow);
+	actionSave = new QAction(QIcon(":/images/save.png"), tr("&Save..."), MainWindow);
+	actionExit = new QAction(QIcon(":/images/exit.png"), tr("&Exit..."), MainWindow);
+
+	actionAddUser = new QAction(QIcon(":/images/adduser.png"), tr("&Add User..."), MainWindow);
+	actionAddItem = new QAction(QIcon(":/images/additem.png"), tr("&Add Item..."), MainWindow);
+	actionAddOrder = new QAction(QIcon(":/images/addorder.png"), tr("&Add Order..."), MainWindow);
+
+	actionQueryByDate = new QAction(QIcon(":/images/querybydate.png"), tr("&Add User..."), MainWindow);
+	actionQueryByNameAndDate = new QAction(QIcon(":/images/querybyname.png"), tr("&Add User..."), MainWindow);
+	
+	actionCounterByDate = new QAction(QIcon(":/images/countbydate.png"), tr("&CountByDate..."), MainWindow);
+	actionCounterByNameAndDate = new QAction(QIcon(":/images/countbyname.png"), tr("&CountByName..."), MainWindow);
+
+	actionAbout = new QAction(QIcon(":/images/help.png"), tr("&Help..."), MainWindow);
+
 	centralWidget = new QWidget(MainWindow);
 	MainWindow->setCentralWidget(centralWidget);
 	menuBar = new QMenuBar(MainWindow);

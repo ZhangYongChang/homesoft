@@ -1,5 +1,5 @@
 # Project setting.
-project(examples CXX C)
+project(homesoft CXX C)
 
 # CMake version requires.
 cmake_minimum_required(VERSION 2.6.2)
